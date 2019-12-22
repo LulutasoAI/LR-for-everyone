@@ -70,15 +70,15 @@ class LRmachine(models.Model):
         plt.ylabel("Price")
         plt.plot(X,y)
         plt.plot(X, Y_pred, color="red")
-        plt.savefig(os.path.join(fname, "picture.png"))
-        plg.figure(clear=True)
-        plt.title("{} price chart with Linear Regression Analysis on it".format(sid))
+        plt.savefig(os.path.join(fname, '/home/LulutasoAI/static/picture.png'))
+        plt.figure(clear=True)
+        """plt.title("{} price chart with Linear Regression Analysis on it".format(sid))
         plt.xlabel("Date")
         plt.ylabel("Price")
         plt.plot(X,y)
         plt.plot(X, Y_pred, color="red")
         plt.savefig(os.path.join("lulutasoai.pythonanywhere.com", "static", "picture.png"))
-        plt.figure(clear=True)
+        plt.figure(clear=True)"""
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
