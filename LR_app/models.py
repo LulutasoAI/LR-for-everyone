@@ -33,6 +33,7 @@ class LRmachine(models.Model):
         from pandas_datareader import data
         from PIL import Image
         import os
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         plt.figure(clear=True)
         cwd = os.getcwd()
         fname = os.path.join(cwd, "static")
@@ -70,6 +71,7 @@ class LRmachine(models.Model):
         plt.plot(X,y)
         plt.plot(X, Y_pred, color="red")
         plt.savefig(os.path.join(fname, "picture.png"))
+        plt.savefig(os.path.join(BASE_DIR, "static", "picture.png"))
         plt.figure(clear=True)
 
 class Post(models.Model):
