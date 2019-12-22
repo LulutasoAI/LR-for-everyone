@@ -77,7 +77,7 @@ class LRmachine(models.Model):
         plt.ylabel("Price")
         plt.plot(X,y)
         plt.plot(X, Y_pred, color="red")
-        plt.savefig(os.path.join(BASE_DIR, "static", "picture.png"))
+        plt.savefig(os.path.join("lulutasoai.pythonanywhere.com", "static", "picture.png"))
         plt.figure(clear=True)
 
 class Post(models.Model):
